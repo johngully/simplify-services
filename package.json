@@ -1,0 +1,26 @@
+{
+  "name": "simplify-services",
+  "version": "1.0.0",
+  "description": "Simplify services",
+  "main": "server.mjs",
+  "scripts": {
+    "start": "nodemon ./index.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johngully/simplify-services.git"
+  },
+  "author": "John Gully",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johngully/simplify-services/issues"
+  },
+  "homepage": "https://github.com/johngully/simplify-services#readme",
+  "dependencies": {
+    "apollo-server-express": "^2.25.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "graphql": "^15.5.0"
+  }
+}
