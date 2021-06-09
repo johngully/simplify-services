@@ -1,0 +1,13 @@
+type Envelope {
+  id: ID
+  targetBalance: Float
+  currentBalance: Float
+  name: String
+  description: String
+  transactions: [Transaction]
+}
+
+type Query {
+  envelope(id: ID): Envelope
+  envelopes: [Envelope]!
+}

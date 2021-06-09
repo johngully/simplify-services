@@ -2,9 +2,10 @@
   "name": "simplify-services",
   "version": "1.0.0",
   "description": "Simplify services",
-  "main": "server.mjs",
+  "main": "npm nodemon server.mjs",
   "scripts": {
-    "start": "nodemon ./index.mjs",
+    "dev": "nodemon ./index.mjs",
+    "start": "./index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,9 +19,14 @@
   },
   "homepage": "https://github.com/johngully/simplify-services#readme",
   "dependencies": {
-    "apollo-server-express": "^2.25.0",
+    "@graphql-tools/load-files": "^6.3.2",
+    "@graphql-tools/merge": "^6.2.14",
+    "apollo-server": "^2.25.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "graphql": "^15.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
