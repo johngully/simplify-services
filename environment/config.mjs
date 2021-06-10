@@ -9,7 +9,8 @@ const config = {
   environment: {},
   port: _.toPositiveInteger(process.env.PORT),
   graphql: {
-    playground: _.toBoolean(process.env.GRAPHQL_PLAYGROUND)
+    playground: _.toBoolean(process.env.GRAPHQL_PLAYGROUND),
+    tracing: _.toBoolean(process.env.GRAPHQL_TRACING)
   }
 }
 // If an environment has been declared, then add the value

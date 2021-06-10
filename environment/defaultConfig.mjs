@@ -5,7 +5,8 @@ const defaultConfig = {
   },
   "port": 3000,
   "graphql": {
-    "playground": false
+    "playground": false,
+    "tracing": false
   }
 };
 

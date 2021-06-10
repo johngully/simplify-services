@@ -14,6 +14,7 @@ const apolloServer = new ApolloServer({
   typeDefs,
   resolvers,
   playground: config.graphql.playground,
+  tracing: config.graphql.tracing
 });
 
 export default apolloServer;

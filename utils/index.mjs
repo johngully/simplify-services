@@ -3,21 +3,27 @@ import _ from "lodash";
 // Convert a string to an integer greater than 0
 //   '1' => 1
 //   '0' => undefined
+//   undefined || error => undefined
 const toPositiveInteger = (value) => {
-  const newValue = _.toInteger(value);
-  return newValue ? newValue : undefined;
+  try {
+    const newValue = _.toInteger(value);
+    return newValue ? newValue : undefined;
+  }
+  catch {
+    return undefined;
+  }
 }
 
 // Convert a string to a boolean value
 //   'true' => true
 //   'false' => false
-//   undefined => false
+//   undefined || error => undefined
 const toBoolean = (value) => {
-  if (value) {
+  try {
     return JSON.parse(value.toLowerCase());
   }
-  else {
-    return false;
+  catch {
+    return undefined;
   }
 }
 
