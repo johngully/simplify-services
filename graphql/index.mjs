@@ -1,21 +1,27 @@
 import { ApolloServer } from "apollo-server";
 import config from "../environment/config.mjs";
 import typeDefs from "./typeDefs/index.mjs";
-import { transactions, envelopes } from "./data.mjs";
+import { accounts, envelopes, transactions } from "./data.mjs";
 
 const resolvers = {
   Query: {
-    transactions: () => {
-      return transactions;
+    accounts: () =>{
+      return accounts;
     },
-    transaction: (parent, args, context, info) => {
-      return transactions.find(transaction => transaction.id === args.id)
+    account: (parent, args, context, info) => {
+      return accounts.find(account => account.id === args.id)
     },
     envelopes: () =>{
       return envelopes;
     },
     envelope: (parent, args, context, info) => {
       return envelopes.find(envelope => envelope.id === args.id)
+    },
+    transactions: () => {
+      return transactions;
+    },
+    transaction: (parent, args, context, info) => {
+      return transactions.find(transaction => transaction.id === args.id)
     },
   }
 };

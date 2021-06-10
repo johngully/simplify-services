@@ -1,0 +1,21 @@
+enum AccountType {
+  checking
+  savings
+}
+
+type Account {
+  id: ID
+  bank: String
+  routingNumber: String
+  accountNumber: String
+  accountType: AccountType
+  owner: String
+  name: String
+  description: String
+  transactions: [Transaction]
+}
+
+type Query {
+  account(id: ID!): Account
+  accounts: [Account]!
+}
