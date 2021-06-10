@@ -8,6 +8,6 @@ type Envelope {
 }
 
 type Query {
-  envelope(id: ID): Envelope
+  envelope(id: ID!): Envelope
   envelopes: [Envelope]!
 }

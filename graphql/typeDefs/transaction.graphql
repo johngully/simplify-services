@@ -12,6 +12,6 @@ type Transaction {
 }
 
 type Query {
-  transaction(id: ID): Transaction
+  transaction(id: ID!): Transaction
   transactions: [Transaction]!
 }
