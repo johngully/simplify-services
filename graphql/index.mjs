@@ -10,13 +10,10 @@ const resolvers = {
   }
 };
 
-// Enable playground if the environment is
-const playground = config.graphql.playground;
-
 const apolloServer = new ApolloServer({
   typeDefs,
   resolvers,
-  playground,
+  playground: config.graphql.playground,
 });
 
 export default apolloServer;
