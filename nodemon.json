@@ -1,0 +1,4 @@
+{
+  "ext": ".graphql, .js, .json, .mjs, .yml, .yaml",
+  "watch": [".", "./.env"]
+}
