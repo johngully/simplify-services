@@ -21,7 +21,7 @@ if (process.env.NODE_ENV) {
 
 // Apply the default values for anything that is not specified in the environment
 _.defaultsDeep(config, defaultConfig);
-console.debug("config:\n", config);
+// console.debug("config:\n", config);
 
 export const port = config.port;
 export const environment = config.environment;
