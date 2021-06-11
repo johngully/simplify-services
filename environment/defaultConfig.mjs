@@ -1,4 +1,5 @@
 const defaultConfig = {
+  "appName": "Simplify",
   "environment": {
     "development": true,
     "production": false
@@ -7,6 +8,12 @@ const defaultConfig = {
   "graphql": {
     "playground": false,
     "tracing": false
+  },
+  "plaid": {
+    "environment": "sandbox",
+    "countryCodes": ["US"],
+    "language": "en",
+    "products": ["auth", "transactions"]
   }
 };
 

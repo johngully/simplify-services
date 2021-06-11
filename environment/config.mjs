@@ -6,11 +6,19 @@ dotenv.config();
 
 // Get values from the environment configuration
 const config = {
-  environment: {},
+  appName: process.env.APP_NAME,
   port: _.toPositiveInteger(process.env.PORT),
+  environment: {},
   graphql: {
     playground: _.toBoolean(process.env.GRAPHQL_PLAYGROUND),
     tracing: _.toBoolean(process.env.GRAPHQL_TRACING)
+  },
+  plaid: {
+    clientID: process.env.PLAID_CLIENT_ID,
+    secret: process.env.PLAID_SECRET,
+    environment: process.env.PLAID_ENVIRONMENT,
+    countryCodes: process.env.PLAID_COUNTRY_CODES,
+    language: process.env.PLAID_LANGUAGE
   }
 }
 // If an environment has been declared, then add the value
