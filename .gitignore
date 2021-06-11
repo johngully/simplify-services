@@ -1,2 +1,6 @@
 .env
 node_modules
+npm-debug.*
+
+# macOS
+.DS_Store
