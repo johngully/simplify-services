@@ -4,9 +4,10 @@
   "description": "Simplify services",
   "main": "npm nodemon server.mjs",
   "scripts": {
-    "dev": "nodemon ./index.mjs",
+    "dev": "npm run tunnel & nodemon ./index.mjs",
     "start": "./index.mjs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tunnel": "npx localtunnel --port 4000 --subdomain simplify-services"
   },
   "repository": {
     "type": "git",
