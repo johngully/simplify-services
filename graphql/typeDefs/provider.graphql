@@ -1,0 +1,5 @@
+type Query {
+  bankAccessToken(publicToken: String): String
+  bankLinkToken(userId: ID!): String
+  bankSandboxAccessToken(institutionId: String): String
+}

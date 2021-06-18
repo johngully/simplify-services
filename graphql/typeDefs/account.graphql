@@ -8,7 +8,7 @@ type Account {
   bank: String
   routingNumber: String
   accountNumber: String
-  accountType: AccountType
+  accountType: String
   owner: String
   name: String
   description: String
@@ -16,6 +16,6 @@ type Account {
 }
 
 type Query {
-  account(id: ID!): Account
-  accounts: [Account]!
+  account(accessToken: String!, id: ID!): Account
+  accounts(accessToken: String!): [Account]!
 }

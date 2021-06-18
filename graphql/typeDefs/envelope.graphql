@@ -8,6 +8,6 @@ type Envelope {
 }
 
 type Query {
-  envelope(id: ID!): Envelope
-  envelopes: [Envelope]!
+  envelope(accessToken: String!, id: ID!): Envelope
+  envelopes(accessToken: String!): [Envelope]!
 }

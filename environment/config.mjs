@@ -17,6 +17,9 @@ const config = {
     clientID: process.env.PLAID_CLIENT_ID,
     secret: process.env.PLAID_SECRET,
     environment: process.env.PLAID_ENVIRONMENT,
+    username: process.env.PLAID_USERNAME,
+    password: process.env.PLAID_PASSWORD,
+    pin: process.env.PLAID_PIN,
     countryCodes: process.env.PLAID_COUNTRY_CODES,
     language: process.env.PLAID_LANGUAGE
   }

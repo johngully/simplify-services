@@ -1,10 +1,13 @@
 type Transaction {
   id: ID
-  account: String
+  accountId: String
   timestamp: String
+  pending: String
   amount: Float
+  currency: String
   description: String
   name: String
+  merchant: String
   note: String
   envelope: Envelope
   created: String
@@ -12,6 +15,6 @@ type Transaction {
 }
 
 type Query {
-  transaction(id: ID!): Transaction
-  transactions: [Transaction]!
+  transaction(accessToken: String!, id: ID!): Transaction
+  transactions(accessToken: String!, accountIds: [String]!, startDate: String!, endDate: String!): [Transaction]!
 }
