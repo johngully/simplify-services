@@ -24,14 +24,15 @@ async function getInstitution(institutionId) {
 }
 
 async function beginAuthentication(userId) {
-  const response = await plaidClient.createLinkToken({
+  const options = {
     user: { client_user_id: userId },
     client_name: config.appName,
     country_codes: config.plaid.countryCodes,
     language: config.plaid.language,
     products: config.plaid.products
-  });
-
+  };
+  const response = await plaidClient.createLinkToken(options);
+  // console.debug("Link Token Options:\n", options);
   // console.debug("Link Token Response:\n", response);
   return response.link_token;
 }
